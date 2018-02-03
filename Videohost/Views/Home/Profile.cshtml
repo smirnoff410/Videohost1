@@ -1,0 +1,162 @@
+﻿@using Videohost.Models;
+@{
+    ViewBag.Title = "Профиль";
+}
+
+<style>
+    .container1 {
+        display: grid;
+        grid-template-areas: "header" "content" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 70px;
+        min-height: 100vh;
+    }
+</style>
+
+<div class="content">
+    <div class="left-profile">
+        <div class="gallery">
+            <div>
+                <iframe src="@ViewBag.first_video_profile" allowfullscreen frameborder="0" name="tab"></iframe>
+            </div>
+            <div>
+                <span>
+                    @Html.ActionLink("Добавить видео", "Addvideo", "Home", new { }, new { @style="color:#fff;" })
+                    @foreach (var item in ViewBag.VideoProfile)
+                    {
+                        string video = "https://www.youtube.com/embed/" + @item.link_video.Substring(32);
+                        string preview = "http://img.youtube.com/vi/" + @item.link_video.Substring(32) + "/default.jpg";
+                        <a href="@video" target="tab"><img src="@preview"></a>
+                    }
+                </span>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="text-chat">
+                @foreach (var item in ViewBag.Message)
+                {
+                    <span>@item.date</span><br /><span style="color: #2d8bbb;">@item.User.Email</span>
+                    <span> : @item.text</span>
+                    using (VideohostEntities db = new VideohostEntities())
+                    {
+                        User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                        if (user.Id != item.User.Id)
+                        {
+                            <a style="color: blue;" href="/Home/AddFriend/@item.User.Id">Добавить</a>
+                        }
+                    }
+                    if (User.Identity.IsAuthenticated)
+                    {
+                        using (VideohostEntities db = new VideohostEntities())
+                        {
+                            User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                            if (user.role == 1)
+                            {
+                                <a style="color: blue;" href="/Admin/DelMessage/@item.Id">Удалить</a>
+                            }
+                        }
+                    }
+                    <br />
+                }
+            </div>
+            <p>
+                @using (Html.BeginForm("Profile", "Home", FormMethod.Post))
+                {
+                    <input type="text" name="message" id="message" />
+                    <button type="submit" name="action" value="Chat">Отправить</button>
+                }
+            </p>
+        </div>
+    </div>
+    <div class="right-profile">
+        <div class="left-buttons">
+            <div class="accordion">
+                <ul>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="title_block">Друзья</h2>
+                        <div class="msg">
+                            @if (ViewBag.FriendProfile != null)
+                            {
+                                foreach (var item in ViewBag.FriendProfile)
+                                {
+                                    <span>@item.Email</span>
+                                    if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a style="padding: 0; background: #fff; border: none; color: blue;" href="/Home/DelFriend/@item.Id">Удалить</a>
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                <p>У вас нет друзей :(</p>
+                            }
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="title_block">Сообщения</h2>
+                        <div class="msg">
+                            @if (ViewBag.MessageProfile != null)
+                            {
+                                foreach (var item in ViewBag.MessageProfile)
+                                {
+                                    <p>@item.text <span style="color:#fd0a0a75;">@item.date</span></p>
+                                }
+                            }
+                            else
+                            {
+                                <p>У вас нет сообщений :(</p>
+                            }
+                        </div>
+                    </li>
+                    @*<li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="title_block">Плейлисты</h2>
+                        <div class="msg">
+                            <p>Playlist 1</p>
+                            <div class="video-responsive">
+                                <iframe width="1280" height="720" src="http://www.youtube.com/embed/mRrE8CFkkAg" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </li>*@
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="title_block">Настройки профиля</h2>
+                        <div class="msg">
+                                <p>
+                                    Ссылка на фото
+                                </p>
+@using (Html.BeginForm("ProfilePhoto", "Home", FormMethod.Post))
+{
+                                <div>
+                                    <input type="text" id="photo" name="photo">
+                                    <button type="submit" name="action">Изменить</button>
+                                </div>
+}
+                                <p>
+                                    Текс от себе
+                                </p>
+@using (Html.BeginForm("ProfileAbout", "Home", FormMethod.Post))
+{
+                                <div style="margin-bottom: 5px;">
+                                    <textarea name="about"></textarea>
+                                    <button type="submit" name="action">Изменить</button>
+                                </div>
+}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="photo">
+            <img width="200" src="@ViewBag.ProfilePhoto" class="img-circle"/>
+            <p style="color: #fff;" class="about">@ViewBag.ProfileText</p>
+        </div>
+    </div>
+</div>
+

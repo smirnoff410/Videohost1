@@ -1,0 +1,46 @@
+﻿@model Videohost.Models.User
+@{
+    ViewBag.Title = "Регистрация";
+}
+<style>
+    .red {
+        color: red;
+    }
+
+    .container1 {
+        display: grid;
+        grid-template-areas: "header" "forms" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 70px;
+        min-height: 100vh;
+    }
+</style>
+<div class="forms" style="position: relative;">
+    <div style="width: 400px;position: absolute;left: 50%; margin-left:-200px;">
+        <form method="post" onsubmit="return checkPass()" action="/Account/Registration" class="ui-form">
+            <h3>Регистрация</h3>
+            <div class="form-row">
+                <input type="text" id="email" required autocomplete="off" name="Email"><label for="email">Email</label>
+            </div>
+            <div class="form-row">
+                <input type="password" id="password" required autocomplete="off" name="password"><label for="password">Пароль</label>
+            </div>
+            <div class="form-row">
+                <input type="password" id="password_1" required autocomplete="off" name="text"><label for="password">Подтвердите пароль</label>
+            </div>
+            <span class="red">@ViewBag.Head</span>
+            <p><input type="submit" class="pointer" value="Зарегистрироваться"></p>
+        </form>
+    </div>
+</div>
+
+<script>
+
+function checkPass() {
+    if (document.getElementById('password').value != document.getElementById('password_1').value) {
+        alert('Пароли не совпадают');
+    return false;
+  } else return true;
+}
+
+</script> 

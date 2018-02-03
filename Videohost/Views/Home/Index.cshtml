@@ -1,0 +1,156 @@
+﻿@using Videohost.Models;
+@model IEnumerable<Videohost.Models.Tournament>
+@{
+    ViewBag.Title = "Главная";
+}
+<main class="main">
+    <div class="main-content">
+        <h1 style="text-align: center; color: #fff; margin-top: 0;">@ViewBag.Game</h1>
+        <div class="carousel">
+            <div><iframe width="560" height="315" src="@ViewBag.first_video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen name="slider1"></iframe></div>
+            <span>
+                @foreach (var item in ViewBag.Videos)
+                {
+                    int video_id = item.Id;
+                    string video = "https://www.youtube.com/embed/" + @item.link_video.Substring(32);
+                    string preview = "http://img.youtube.com/vi/" + @item.link_video.Substring(32) + "/default.jpg";
+                    <a href="@video" target="slider1"><img src="@preview"/>
+@if (User.Identity.IsAuthenticated)
+{
+                    using (Html.BeginForm("Like", "Home", FormMethod.Post))
+                    {
+                        <input type="hidden" value="@item.Id" name="VideoId" />
+                        <div style="padding-top: 5px;">
+                            @using (VideohostEntities db = new VideohostEntities())
+                            {
+                                User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                                LikeDislike likedislike = db.LikeDislikes.FirstOrDefault(p => p.id_user == user.Id && p.id_video == video_id && p.assessment == 1);
+                                if (likedislike != null)
+                                {
+                                    <button type="submit" style="background: green;" name="action" value="Like" class="btn btn-default">Like</button>
+                                }
+                                else
+                                {
+                                    <button type="submit" name="action" value="Like" class="btn btn-default">Like</button>
+                                }
+                                <span>@db.LikeDislikes.Where(p => p.id_video == video_id && p.assessment == 1).Count()</span>
+                            }
+                        </div>
+                    }
+                    using (Html.BeginForm("Dislike", "Home", FormMethod.Post))
+                    {
+                        <input type="hidden" value="@item.Id" name="VideoId" />
+                        <div style="padding-top: 5px;">
+                        @using (VideohostEntities db = new VideohostEntities())
+                        {
+                            User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                            LikeDislike likedislike = db.LikeDislikes.FirstOrDefault(p => p.id_user == user.Id && p.id_video == video_id && p.assessment == 2);
+                            if (likedislike != null)
+                            {
+                                <button type="submit" style="background: red;" name="action" value="Dislike" class="btn btn-default">Dislike</button>
+                            }
+                            else
+                            {
+                                <button type="submit" name="action" value="Dislike" class="btn btn-default">Dislike</button>
+                            }
+                            <span>@db.LikeDislikes.Where(p => p.id_video == video_id && p.assessment == 2).Count()</span>
+                        }
+                        </div>
+                    }
+}
+                    </a>
+                }
+            </span>
+        </div>
+        @*<div style="margin: 10px; text-align: center;">
+            <a href="/Home/Like/@item.Id" class="like">Like</a><a href="/Home/Dislike/@item.Id" class="dislike">Dislike</a>
+        </div>
+        <div style="color: #000; text-align: center;"><span>@item.quantity_like</span> - <span>@item.quantity_dislike</span></div>*@
+    </div>
+</main>
+
+<aside class="left">
+    <div class="left-content">
+        <table cellspacing="0">
+            <colgroup>
+                <col span="4" style="background:Khaki"><!-- С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы-->
+                <col style="background-color:LightCyan"><!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
+            </colgroup>
+            <tr>
+                <th>Дата</th>
+                <th>Организатор</th>
+                <th>Призовой фонд</th>
+                <th>Статус</th>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    using (VideohostEntities db = new VideohostEntities())
+                    {
+                        User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                        if (user.role == 1)
+                        {
+                            <th>Удаление</th>
+                        }
+                    }
+                }
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.date</td>
+                    <td>@item.organizer</td>
+                    <td>$@item.prize_fund</td>
+                    <td>@item.status</td>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        using (VideohostEntities db = new VideohostEntities())
+                        {
+                            User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                            if (user.role == 1)
+                            {
+                                <th><a href="/Admin/DelTour/@item.Id">Удалить</a></th>
+                            }
+                        }
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+</aside>
+
+<aside class="right">
+    <div class="right-content">
+        <table cellspacing="0">
+            <tr style="background-color:LightCyan;">
+                <th>Новости</th>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    using (VideohostEntities db = new VideohostEntities())
+                    {
+                        User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                        if (user.role == 1)
+                        {
+                            <td>Удаление</td>
+                        }
+                    }
+                }
+            </tr>
+            @foreach (var item in ViewBag.News)
+            {
+                <tr>
+                    <td><a href="/Home/News/@item.Id">@item.title</a></td>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        using (VideohostEntities db = new VideohostEntities())
+                        {
+                            User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                            if (user.role == 1)
+                            {
+                                <td><a href="/Admin/DelNews/@item.Id">Удалить</a></td>
+                            }
+                        }
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+</aside>

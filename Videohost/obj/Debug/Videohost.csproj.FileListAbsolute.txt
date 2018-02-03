@@ -1,0 +1,210 @@
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ApplicationInsights.config
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\csc.exe
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\csc.exe.config
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\csc.rsp
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\csi.exe
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\csi.exe.config
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\csi.rsp
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.AppContext.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Console.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.IO.Compression.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Security.Claims.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.ValueTuple.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\vbc.exe
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\vbc.exe.config
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\vbc.rsp
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Videohost.dll.config
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Videohost.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Videohost.pdb
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Antlr3.Runtime.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.Web.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Newtonsoft.Json.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Helpers.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Mvc.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Optimization.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Razor.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.WebPages.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\WebGrease.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Helpers.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Mvc.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Optimization.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Razor.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.WebPages.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Antlr3.Runtime.pdb
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Newtonsoft.Json.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\Microsoft.AI.Web.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\obj\Debug\Videohost.csprojResolveAssemblyReference.cache
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\obj\Debug\Videohost.csproj.CoreCompileInputs.cache
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\obj\Debug\Videohost.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\obj\Debug\Videohost.pdb
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\EntityFramework.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\EntityFramework.SqlServer.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\EntityFramework.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\EntityFramework.SqlServer.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ru\EntityFramework.resources.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Providers.dll
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\System.Web.Providers.xml
+C:\Users\Vladislav\Documents\Visual Studio 2017\Projects\Videohost\Videohost\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ApplicationInsights.config
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\csc.exe
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\csc.exe.config
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\csc.rsp
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\csi.exe
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\csi.exe.config
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\csi.rsp
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.AppContext.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Console.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.IO.Compression.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Security.Claims.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.ValueTuple.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\vbc.exe
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\vbc.exe.config
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\vbc.rsp
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Videohost.dll.config
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Videohost.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Videohost.pdb
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Antlr3.Runtime.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\EntityFramework.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\EntityFramework.SqlServer.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.Web.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Newtonsoft.Json.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Helpers.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Mvc.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Optimization.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Providers.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Razor.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.WebPages.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\WebGrease.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\EntityFramework.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\EntityFramework.SqlServer.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Providers.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Helpers.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Mvc.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Optimization.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.Razor.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.WebPages.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Antlr3.Runtime.pdb
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Newtonsoft.Json.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\Microsoft.AI.Web.xml
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ru\EntityFramework.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\obj\Debug\Videohost.csprojResolveAssemblyReference.cache
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\obj\Debug\Videohost.csproj.CoreCompileInputs.cache
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\obj\Debug\Videohost.dll
+C:\Users\Vladislav\Desktop\Videohost-master\Videohost\obj\Debug\Videohost.pdb

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Логин";
+}
+
+<style>
+    .container1 {
+        display: grid;
+        grid-template-areas: "header" "forms" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 70px;
+        min-height: 100vh;
+    }
+</style>
+
+<div class="forms" style="position: relative;">
+    <div style="width: 400px;position: absolute;left: 50%; margin-left: -200px;">
+        <form method="post" action="/Account/Login" class="ui-form">
+            <h3>Вход</h3>
+            <div class="form-row">
+                <input type="text" id="email" required autocomplete="off" name="Email"><label for="email">Email</label>
+            </div>
+            <div class="form-row">
+                <input type="password" id="password" required autocomplete="off" name="password"><label for="password">Пароль</label>
+            </div>
+            <span style="color:red;">@ViewBag.Head</span>
+            <p><input type="submit" class="pointer" value="Вход"></p>
+        </form>
+    </div>
+</div>
+
+

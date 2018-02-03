@@ -1,0 +1,73 @@
+﻿@using Videohost.Models;
+@model IEnumerable<Videohost.Models.News>
+@{
+    ViewBag.Title = "Новости";
+}
+
+<style>
+    h1 {
+        color: #fff;
+    }
+    h2, h3 {
+        color: #000;
+    }
+
+    .container1 {
+        display: grid;
+        grid-template-areas: "header" "forms" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 70px;
+        min-height: 100vh;
+    }
+
+    .form-horizontal {
+        color: #fff;
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .forms {
+        text-align: center;
+    }
+</style>
+
+<div class="forms">
+
+    @foreach (var item in Model)
+    {
+        <h1>@item.title</h1>
+        <h3>@item.full_news</h3>
+
+        if (User.Identity.IsAuthenticated)
+        {
+            using (VideohostEntities db = new VideohostEntities())
+            {
+                User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                if (user.role == 1)
+                {
+                    <form method="post" action="/Admin/EditNews/@item.Id">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <p class="control-label col-md-2">Название</p>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="title" value="@item.title">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="control-label col-md-2">Новость полностью</p>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="full_news" value="@item.full_news">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" class="pointer" value="Изменить">
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                        }
+                        }
+                        }
+                        }
+</div>

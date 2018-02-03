@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9c7243a47a3b479990b8cbf43db6fda5" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="VideohostModel.AboutUser" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VideohostModel.Friend" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="VideohostModel.Game" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VideohostModel.LikeDislike" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="VideohostModel.Message" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VideohostModel.News" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VideohostModel.Role" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VideohostModel.Tournament" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VideohostModel.User" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VideohostModel.Video" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="VideohostModel.FK_About_User" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_Friend_User" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_Friend_User_2" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_News_Game" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_Tournament_Game" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_Video_Game" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_LikeDislike_User" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_LikeDislike_Video" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_Message_User" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="VideohostModel.FK_Video" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

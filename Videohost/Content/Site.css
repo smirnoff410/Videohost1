@@ -1,0 +1,767 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=cyrillic');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url(image/background.png);
+    background-size: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.header {
+    grid-area: header;
+    background: #fd0a0a75;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.right {
+    grid-area: right;
+    margin: 25px;
+}
+
+.left {
+    grid-area: left;
+    margin: 25px;
+}
+
+.main {
+    grid-area: main;
+    margin-top: 25px;
+}
+
+.container1 {
+    display: grid;
+    grid-template-areas: "header header header" "left main right" "footer footer footer";
+    grid-template-columns: 1fr 600px 1fr;
+    grid-template-rows: 70px 1fr 70px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*Выпадающее меню*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    transition: .4s ease-in-out;
+}
+
+.topmenu {
+    backface-visibility: hidden;
+    background: rgba(255,255,255,.8);
+    margin-left: 15px;
+}
+
+    .topmenu > li {
+        display: inline-block;
+        position: relative;
+    }
+
+        .topmenu > li > a {
+            font-family: 'Montserrat', sans-serif;
+            height: 70px;
+            line-height: 70px;
+            padding: 0 30px;
+            font-weight: bold;
+            color: #003559;
+            text-transform: uppercase;
+        }
+
+.topmenu-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.down:after {
+    content: "\f107";
+    margin-left: 8px;
+    font-family: FontAwesome;
+}
+
+.topmenu li a:hover {
+    color: #E6855F;
+}
+
+.submenu {
+    background: white;
+    border: 2px solid #003559;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    width: 140px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0% 0%;
+    transition: .6s ease-in-out;
+}
+
+.topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+
+.submenu li a {
+    color: #7f7f7f;
+    font-size: 13px;
+    line-height: 36px;
+    padding: 0 30px;
+    font-family: 'Montserrat', sans-serif;
+    ;
+}
+
+.form-group {
+    position: relative;
+    padding-top: 1.5rem;
+    margin-left: 30px;
+    margin-bottom: 0;
+}
+
+.dynamic-label {
+    position: absolute;
+    top: 5px;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+    font-weight: 400;
+    color: #000;
+}
+
+input:placeholder-shown + .dynamic-label {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+#dynamic-label-input {
+    padding: 5px;
+    width: 300px;
+}
+
+.search {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.username {
+    margin-top: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+}
+
+.like, .dislike {
+    margin: 5px;
+    padding: 7px;
+    background: rgba(0,0,0,0.2);
+    border: solid 1px #000;
+}
+
+.like:hover {
+    background: green;
+    color: #fff;
+    cursor: pointer;
+}
+
+    .dislike:hover {
+        background: red;
+        color: #fff;
+        cursor: pointer;
+    }
+
+/*Левый сайдбар*/
+.left-content table {
+    border: solid 1px #fff;
+}
+
+    .left-content table tr td,
+    .left-content table tr th {
+        border: solid 1px #fff;
+    }
+
+/*Правый сайдбар*/
+.right-content table tr td a {
+    color: #fff;
+}
+
+    .right-content table tr td a:hover {
+        color: #E6855F;
+    }
+
+.right-content table {
+    border: solid 1px #fff;
+}
+
+    .right-content table tr td {
+        border: solid 1px #fff;
+    }
+
+/*Main content*/
+.carousel {
+    padding: .3em .3em 0;
+    background: rgb(240,240,240);
+    text-align: center;
+}
+
+    .carousel div {
+        position: relative;
+        margin-bottom: .3em;
+        padding-top: 56.25%;
+    }
+
+    .carousel iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel span {
+        display: inline-block;
+        word-spacing: 1em; /* расстояние между картинками */
+        /* прокрутка миниатюр при необходимости */
+        overflow: auto;
+        white-space: nowrap;
+        word-wrap: normal;
+    }
+
+    .carousel a {
+        position: relative;
+        display: inline-block;
+        max-width: 120px; /* максимальная ширина миниатюр */
+        width: 25%; /* ширина миниатюр */
+        border: 1px solid blue; /* рамка вокруг миниатюр */
+        opacity: .7;
+        text-decoration: none;
+    }
+
+        .carousel a:visited,
+        .carousel a:nth-of-type(1) {
+            border-color: #555; /* рамка вокруг миниатюр просмотренных видео */
+        }
+
+        .carousel a:hover {
+            opacity: 1;
+        }
+
+        .carousel a:not(:active):focus {
+            pointer-events: none;
+        }
+
+        .carousel a::before {
+            content: "";
+            position: absolute;
+            top: 0em;
+            right: 0em;
+            bottom: 0em;
+            left: 0em;
+            background: rgba(0,0,1,.1);
+            transition: background 0s 9999999s;
+        }
+
+        .carousel a:nth-of-type(1)::before {
+            background: rgba(255,255,254,.7);
+        }
+
+    .carousel span:active a::before {
+        background: rgba(0,0,0,0);
+        transition: background 0s;
+    }
+
+    .carousel span:active a:active::before {
+        background: rgba(255,255,255,.7);
+        transition: background 0s;
+    }
+
+    .carousel img {
+        max-width: 100%;
+        vertical-align: middle; /* убрать нижний отступ до рамки под картинкой */
+    }
+
+/*Футер*/
+footer a {
+    color: #fff;
+    margin: 15px;
+}
+
+    footer a:hover {
+        color: #E6855F;
+    }
+
+footer p {
+    color: #000;
+}
+
+/*Регистрация*/
+.ui-form {
+    width: 400px;
+    padding: 80px 30px 30px;
+    background: white;
+}
+
+    .ui-form h3 {
+        position: relative;
+        z-index: 5;
+        margin: 0 0 60px;
+        text-align: center;
+        color: #4a90e2;
+        font-size: 30px;
+        font-weight: normal;
+    }
+
+        .ui-form h3:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 60px;
+            top: -30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #fee8e4;
+        }
+
+        .ui-form h3:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            right: 50px;
+            top: -40px;
+            width: 0;
+            height: 0;
+            border-left: 55px solid transparent;
+            border-right: 55px solid transparent;
+            border-bottom: 90px solid #ffe3b5;
+        }
+
+.form-row {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+    .form-row input {
+        display: block;
+        width: 100%;
+        padding: 0 10px;
+        line-height: 40px;
+        font-family: 'Roboto', sans-serif;
+        background: none;
+        border-width: 0;
+        border-bottom: 2px solid #4a90e2;
+        transition: all 0.2s ease;
+    }
+
+    .form-row label {
+        position: absolute;
+        left: 13px;
+        color: #9d959d;
+        font-size: 20px;
+        font-weight: 300;
+        transform: translateY(-35px);
+        transition: all 0.2s ease;
+    }
+
+    .form-row input:focus {
+        outline: 0;
+        border-color: #F77A52;
+    }
+
+        .form-row input:focus + label,
+        .form-row input:valid + label {
+            transform: translateY(-60px);
+            margin-left: -14px;
+            font-size: 14px;
+            font-weight: 400;
+            outline: 0;
+            border-color: #F77A52;
+            color: #F77A52;
+        }
+
+.ui-form input[type="submit"] {
+    width: 100%;
+    padding: 0;
+    line-height: 42px;
+    background: #4a90e2;
+    border-width: 0;
+    color: white;
+    font-size: 20px;
+}
+
+.ui-form p {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/*Profile*/
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-profile {
+    flex: 1 1 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat {
+    flex: 1 1 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .chat .text-chat {
+        flex: 1 1 500px;
+        max-height: 250px;
+        background: #fff;
+        color: #000;
+        border: solid 1px #000;
+        padding: 5px;
+        overflow: auto;
+    }
+
+    .chat p {
+        flex: 1 1 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0;
+        max-height: 35px;
+    }
+
+.right-profile {
+    flex: 1 1 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-buttons {
+    flex: 1 1 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+    .left-buttons a {
+        padding: 10px;
+        border: solid 1px #000;
+        background: Khaki;
+    }
+
+.photo {
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: wrap;
+    border: solid rgb(240,240,240);
+    background: black;
+}
+
+    .gallery div { /* блоки видео + списков */
+        flex: 150px;
+        position: relative;
+        text-align: center;
+    }
+
+        .gallery div:nth-of-type(1) {
+            flex: 10000 1 300px; /* если ширина менее 300 + 150 = 450px , то списки миниатюр смещаются на нижний ряд, подробнее про свойство flex */
+        }
+
+        .gallery div::before {
+            content: "";
+            display: block;
+            padding-top: 100px;
+        }
+
+        .gallery div:nth-of-type(1)::before {
+            padding-top: 56.25%;
+        }
+
+    .gallery iframe,
+    .gallery span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .gallery a { /* для разнообразия, иконки не затемнены, так проще оценить код галереи видео */
+        display: inline-block;
+        margin-top: 5px;
+    }
+
+        .gallery a:last-child {
+            margin-bottom: 5px;
+        }
+
+    .gallery iframe,
+    .gallery img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+.accordion {
+    min-height: 0;
+    display: block;
+    /* относительное позиционирование */
+    position: relative;
+    padding: 0;
+    background-color: #fefffa;
+    overflow: hidden
+}
+    /* заголовки панелей аккордеона */
+    .accordion h2 {
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        display: block;
+        margin: 0;
+        padding: 10px 25px;
+        cursor: pointer;
+        color: #f4f4f4;
+        background: #2d8bbb;
+        border-top: 1px solid #3face4;
+        border-bottom: 1px solid #2479a5;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+/* заголовки панелей аккордеона при наведении
+* в данном варианте не срабатывает
+*/
+/* .accordion h2:hover {
+    display: block;
+    background-color: #005049;
+}
+*/
+
+/* Формируем блоки с содерханием */
+.msg {
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+    /* оформляем параграфы */
+    .msg p {
+        color: rgba(48, 69, 92, 0.8);
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        padding: 0 20px
+    }
+
+/* Позаботимся о небольших экранах */
+@media (max-width: 550px) {
+    .accordion {
+        box-sizing: border-box;
+        transform: translate(0, 0);
+        max-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        left: 0;
+    }
+}
+
+/* Формируем неупорядоченный список */
+.accordion ul {
+    list-style: none;
+    perspective: 900;
+    padding: 0;
+    margin: 0;
+}
+
+    /* Определяем и формируем отдельный элемент списка 
+ * в который поместим скрытый флажек,
+ * заголовок панелей и блок с содержанием
+*/
+    .accordion ul li {
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+
+        /* устанавливаем время ожидания перед воспроизведением анимации 
+ * на основе нумерации в дереве элементов
+*/
+        .accordion ul li:nth-of-type(1) {
+            animation-delay: 0.5s;
+        }
+
+        .accordion ul li:nth-of-type(2) {
+            animation-delay: 0.75s;
+        }
+
+        .accordion ul li:nth-of-type(3) {
+            animation-delay: 1s;
+        }
+
+        .accordion ul li:last-of-type {
+            padding-bottom: 0;
+        }
+
+        /* Сформируем  указатель переключения состояния аккордеона */
+        .accordion ul li i {
+            position: absolute;
+            transform: translate(-6px, 0);
+            margin-top: 16px;
+            /* расположим указатель на панели заголовка справа */
+            right: 25px;
+        }
+
+            /* "Рисуем " сам указатель */
+            .accordion ul li i:before, .accordion ul li i:after {
+                content: "";
+                position: absolute;
+                background-color: #eee;
+                width: 3px;
+                height: 9px;
+            }
+            /* Добавляем элемент трансформации указателя при переключении */
+            .accordion ul li i:before {
+                transform: translate(-2px, 0) rotate(45deg);
+            }
+
+            .accordion ul li i:after {
+                transform: translate(2px, 0) rotate(-45deg);
+            }
+
+        /* Делаем чекбокс скрытым*/
+        .accordion ul li input[type=checkbox] {
+            position: absolute;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+        }
+            /* Когда у флажка установлен checked  
+ * блок с содержанием скрыт
+*/
+            .accordion ul li input[type=checkbox]:checked ~ div.msg {
+                margin-top: 0;
+                max-height: 0;
+                opacity: 0;
+                transform: translate(0, 50%);
+            }
+            /* А указатель показывает вниз */
+            .accordion ul li input[type=checkbox]:checked ~ i:before {
+                transform: translate(2px, 0) rotate(45deg);
+            }
+
+            .accordion ul li input[type=checkbox]:checked ~ i:after {
+                transform: translate(-2px, 0) rotate(-45deg);
+            }
+/*  Устанавливаем эффект перехода
+ * между двумя состояниями указателя 
+*/
+div.msg, ul li i:before, ul li i:after {
+    transition: all 0.5s ease-in-out;
+}
+/**
+ * Изображения внутри аккордеона
+ * ...сделаем их отзывчивыми
+ */
+.accordion .msg img {
+    width: 100%;
+    height: auto;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* полноразмерная картинка */
+.msg img .large-img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* миниатюра слева */
+.msg img.img-left {
+    width: 25%;
+    float: left;
+    margin: 5px 15px 5px 0;
+}
+/* миниатюра справа */
+.msg img.img-right {
+    width: 25%;
+    float: right;
+    margin: 5px 0 5px 15px;
+}
+
+/* Встраиваемое видео */
+.video-responsive {
+    margin: 20px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+    /* Предусмотри использование кода встраиваемого видео
+ *через iframe, object или embed */
+    .video-responsive iframe,
+    .video-responsive object,
+    .video-responsive embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+@media screen and (max-width: 950px) {
+    .container {
+        grid-template-areas: "header" "left" "main" "right" "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 70px 50px 1fr 50px 70px;
+    }
+}

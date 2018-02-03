@@ -1,0 +1,135 @@
+﻿@using Videohost.Models;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        <script src="https://use.fontawesome.com/d7ca8ea22e.js"></script>
+</head>
+<body style="background-image: url(/Content/image/background.png); ">
+    <div class="container1">
+        <header class="header">
+            <a href="/Home/Index"><img src="/Content/image/header.png" width="200" /></a>
+            <nav>
+                <ul class="topmenu">
+                    <li>
+                        <a href="/Home/Index" class="down">Игры</a>
+                        <ul class="submenu">
+                            <li><a href="/Home/Index">Dota 2</a></li>
+                            <li><a href="/Home/Index/2">CS:GO</a></li>
+                            <li><a href="/Home/Index/3">Heartstone</a></li>
+                            <li><a href="/Home/Index/4">PUBG</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="form-group">
+                <input type="text" id="dynamic-label-input" placeholder="Поиск">
+                <label class="dynamic-label" for="dynamic-label-input">Поиск по сайту</label>
+            </div>
+            <a class="search" href="#"><i class="fa fa-search fa-lg"></i></a>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <nav>
+                    <ul class="topmenu topmenu-right">
+                        <li>
+                            @Html.ActionLink("Регистрация", "Registration", "Account", new { }, new { @class = "down" })
+                            <ul class="submenu">
+                                <li>@Html.ActionLink("Вход", "Login", "Account")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            }
+            else
+            {
+                <span class="username">@User.Identity.Name</span>
+                <nav>
+                    <ul class="topmenu topmenu-right">
+                        <li>
+                            @Html.ActionLink("Профиль", "Profile", "Home", new { }, new { @class = "down" })
+                            <ul class="submenu">
+                                @using (VideohostEntities db = new VideohostEntities())
+                                {
+                                    User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
+                                    if (user.role == 1)
+                                    {
+                                        <li>@Html.ActionLink("Админу", "Admin", "Admin")</li>
+                                    }
+                                }
+                                <li>@Html.ActionLink("Выйти", "Logout", "Account")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            }
+
+        </header>
+            @RenderBody()
+            <footer class="footer">
+                <a href="/Home/Index">Dota 2</a>
+                <a href="/Home/Index/2">CS:GO</a>
+                <a href="/Home/Index/3">Heartstone</a>
+                <a href="/Home/Index/4">PUBG</a>
+                <p style="font-size: 15px;">
+                    Videohost. Все права защищены. @DateTime.Now.Year
+                </p>
+            </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+
+        <script>
+            $('#select').each(function () {
+                var $this = $(this), numberOfOptions = $(this).children('option').length;
+
+                $this.addClass('select-hidden');
+                $this.wrap('<div class="select"></div>');
+                $this.after('<div class="select-styled"></div>');
+
+                var $styledSelect = $this.next('div.select-styled');
+                $styledSelect.text($this.children('option').eq(0).text());
+
+                var $list = $('<ul />', {
+                    'class': 'select-options'
+                }).insertAfter($styledSelect);
+
+                for (var i = 0; i < numberOfOptions; i++) {
+                    $('<li />', {
+                        text: $this.children('option').eq(i).text(),
+                        rel: $this.children('option').eq(i).val()
+                    }).appendTo($list);
+                }
+
+                var $listItems = $list.children('li');
+
+                $styledSelect.click(function (e) {
+                    e.stopPropagation();
+                    $('div.select-styled.active').not(this).each(function () {
+                        $(this).removeClass('active').next('ul.select-options').hide();
+                    });
+                    $(this).toggleClass('active').next('ul.select-options').toggle();
+                });
+
+                $listItems.click(function (e) {
+                    e.stopPropagation();
+                    $styledSelect.text($(this).text()).removeClass('active');
+                    $this.val($(this).attr('rel'));
+                    $list.hide();
+                    //console.log($this.val());
+                });
+
+                $(document).click(function () {
+                    $styledSelect.removeClass('active');
+                    $list.hide();
+                });
+
+            });
+        </script>
+        @RenderSection("scripts", required: false)
+</body>
+</html>

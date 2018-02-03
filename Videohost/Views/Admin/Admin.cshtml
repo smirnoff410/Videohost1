@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Панель админа";
+}
+
+<style>
+    .container1 {
+        display: grid;
+        grid-template-areas: "header" "forms" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 70px;
+        min-height: 100vh;
+    }
+    .form-horizontal {
+        color: #fff;
+        width: 600px;
+        margin: 0 auto;
+    }
+</style>
+<div class="forms">
+    @Html.Partial("NewsAdd")
+
+    @Html.Partial("TournamentsAdd")
+</div>

@@ -1,0 +1,56 @@
+﻿
+@model Videohost.Models.News
+
+<style>
+    .container1 {
+        display: grid;
+        grid-template-areas: "header" "forms" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 70px;
+        min-height: 100vh;
+    }
+    .form-horizontal {
+        color: #fff;
+        width: 600px;
+        margin: 0 auto;
+    }
+</style>
+<div class="forms">
+    @using (Html.BeginForm())
+    {
+        <div class="form-horizontal">
+            <h4>Добавить новость</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <p class = "control-label col-md-2">Заголовок</p>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class = "control-label col-md-2">Полная новость</p>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.full_news, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.full_news, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class = "control-label col-md-2">Название игры</p>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Game.name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Game.name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" name="action" value="News" class="btn btn-default">Добавить</button>
+                </div>
+            </div>
+        </div>
+
+    }
