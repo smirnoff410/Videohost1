@@ -111,26 +111,35 @@ namespace Videohost.Controllers
         }
 
         [HttpPost]
-        public ActionResult ProfilePhoto(string photo)
+        public ActionResult ProfilePhoto(string photo, string about)
         {
             if (User.Identity.IsAuthenticated)
             {
                 string name = User.Identity.Name;
                 User user = db.Users.FirstOrDefault(p => p.Email == name);
                 AboutUser aboutUser = db.AboutUsers.FirstOrDefault(p => p.Id == user.Id);
+                string photo_end = aboutUser.link_photo;
+                string about_end = aboutUser.about;
                 if (photo != "")
                 {
-                    db.AboutUsers.Remove(aboutUser);
-                    db.SaveChanges();
-                    AboutUser aboutuser = new AboutUser
-                    {
-                        Id = user.Id,
-                        link_photo = photo,
-                        about = aboutUser.about
-                    };
-                    db.AboutUsers.Add(aboutuser);
-                    db.SaveChanges();
+                    photo_end = photo;
                 }
+                if (about != "")
+                {
+                    about_end = about;
+                }
+                if(photo == "" && about == "")
+                    return RedirectToAction("Profile", "Home");
+                db.AboutUsers.Remove(aboutUser);
+                db.SaveChanges();
+                AboutUser aboutuser = new AboutUser
+                {
+                    Id = user.Id,
+                    link_photo = photo_end,
+                    about = about_end
+                };
+                db.AboutUsers.Add(aboutuser);
+                db.SaveChanges();
                 ProfileData();
                 return RedirectToAction("Profile", "Home");
             }
@@ -176,17 +185,34 @@ namespace Videohost.Controllers
         }
 
         [HttpPost]
-        public ActionResult Addvideo(string link_video, int games)
+        public ActionResult Addvideo(string link_video, string games)
         {
             if(User.Identity.IsAuthenticated)
             {
+                int game_id;
+                if (games == "Dota 2")
+                {
+                    game_id = 1;;
+                }
+                else if (games == "CS:GO")
+                {
+                    game_id = 2;
+                }
+                else if (games == "Heartstone")
+                {
+                    game_id = 3;
+                }
+                else
+                {
+                    game_id = 4;
+                }
                 string name = User.Identity.Name;
                 User user = db.Users.FirstOrDefault(p => p.Email == name);
                 Video video = new Video()
                 {
                     Id = db.Videos.Count() + 1,
                     link_video = link_video,
-                    id_game = games,
+                    id_game = game_id,
                     id_user = user.Id
                 };
                 db.Videos.Add(video);
@@ -240,7 +266,8 @@ namespace Videohost.Controllers
                 }
 
             }
-            return RedirectToAction("Index", "Home");
+            
+            return RedirectToAction("Index/" + db.Videos.FirstOrDefault(p => p.Id == VideoId).id_game.ToString(), "Home");
         }
 
         public ActionResult Dislike(int VideoId)
@@ -277,7 +304,7 @@ namespace Videohost.Controllers
                     db.SaveChanges();
                 }
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index/" + db.Videos.FirstOrDefault(p => p.Id == VideoId).id_game.ToString(), "Home");
         }
 
         public ActionResult DelFriend(int id)

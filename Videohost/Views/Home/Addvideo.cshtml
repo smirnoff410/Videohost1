@@ -143,14 +143,7 @@
                 <input type="text" id="link_video" required autocomplete="off" name="link_video"><label for="link_video">Ссылка на видео</label>
             </div>
             <div class="form-row">
-                <section>
-                    <select id="select" class="cs-select cs-skin-border">
-                        @foreach (var item in ViewBag.Game)
-                        {
-                            <option value="@item.Id">@item.name</option>
-                        }
-                    </select>
-                </section>                
+                <input type="text" id="game_id" required autocomplete="off" name="game_id"><label for="game_id">Название игры</label>                
             </div>
             <p><input type="submit" class="pointer" value="Загрузить"></p>
         </form>

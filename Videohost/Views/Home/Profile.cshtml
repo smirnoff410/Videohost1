@@ -128,25 +128,22 @@
                         <i></i>
                         <h2 class="title_block">Настройки профиля</h2>
                         <div class="msg">
+
+@using (Html.BeginForm("ProfilePhoto", "Home", FormMethod.Post))
+{
                                 <p>
                                     Ссылка на фото
                                 </p>
-@using (Html.BeginForm("ProfilePhoto", "Home", FormMethod.Post))
-{
                                 <div>
                                     <input type="text" id="photo" name="photo">
-                                    <button type="submit" name="action">Изменить</button>
                                 </div>
-}
                                 <p>
                                     Текс от себе
                                 </p>
-@using (Html.BeginForm("ProfileAbout", "Home", FormMethod.Post))
-{
                                 <div style="margin-bottom: 5px;">
                                     <textarea name="about"></textarea>
-                                    <button type="submit" name="action">Изменить</button>
                                 </div>
+                            <button type="submit" name="action">Изменить</button>
 }
                         </div>
                     </li>
